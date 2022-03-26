@@ -1,0 +1,15 @@
+@use './partials/typography' as*;
+@use './partials/variables' as*;
+@use './partials/mixins' as*;
+@use './partials/hero' as*;
+@use './partials/header' as*;
+@use './partials/footer' as*;
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+.about {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
