@@ -1,0 +1,180 @@
+@use 'mixins' as *;
+@use 'variables' as*;
+
+.footer {
+    background-color: #323232;
+    background-size: cover;
+    width: 100%;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    padding-right: 1rem;
+    padding-left: 1rem;
+    position: relative;
+
+    @include tablet {
+        padding-left: 2.25rem;
+        padding-right: 2.25rem;
+    }
+
+    @include desktop{
+        position: static;
+    }
+
+    &-container{
+
+        @include tablet {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+
+        @include desktop {
+            margin-left: auto;
+            margin-right: auto;
+            width: 85%;
+            position: relative;
+        }
+    }   
+
+    &__title{
+        @include mobile-text-section-header;
+            margin: 0;
+            padding-top: 2.25rem;
+            padding-bottom: 2.25rem;
+            @include tablet {
+                @include desktab-section-header;
+                font-weight: 600;
+                margin-left: auto;
+                margin-right: auto;
+                width: 35%;
+            }
+
+            @include desktop {
+                margin-left: auto;
+                margin-right: auto;
+                width: 35%;
+            }
+    }
+
+    &-social-icons{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+
+        @include tablet {
+            padding-left: 1rem;
+            margin-left: auto;
+            margin-right: auto;
+            width: 75%;
+        }
+
+        @include desktop{
+            margin-left: auto;
+            margin-right: auto;
+            width: 100%;
+            padding-left: 0;
+        }
+
+    }
+
+    &__icons{
+        margin-right: 2rem;
+        margin-bottom: 1rem;
+
+        @include tablet{
+          margin-bottom: 0;
+        }
+    }
+
+    &-text-container{
+
+        @include tablet {
+            display: flex;
+            flex-direction: row;
+            margin-left: auto;
+            margin-right: auto;
+            width: 100%;
+        }
+
+        @include desktop {
+            margin-left: auto;
+            margin-right: auto;
+            width: 85%;
+        }
+
+    }
+
+    &-container__contact{
+        @include mobile-text-footer;
+        padding-bottom: 1rem;
+
+        @include tablet {
+            @include desktab-footer;
+            display: inline-flex;
+            flex-direction: column;
+            width: 80%;
+        }
+
+        @include desktop {
+            display: inline-flex;
+            flex-direction: column;
+            width: 26%;
+        }
+
+    }
+
+    &-container__item{
+
+        @include desktop{
+            margin-left: auto;
+            margin-right: auto;
+            width: 100%;
+        }
+    }
+    
+    &-container__color{
+        color: $silver;
+    }
+
+        
+    &__logo{
+        margin: 0;
+        position: absolute;
+        bottom:70px;
+
+
+        @include tablet {
+            padding-top: 0px;
+            position: absolute;
+            top: 2.25rem;
+            right: 2.25rem;
+        }
+
+        @include desktop{
+            top: 3rem;
+            right: 1rem;
+        }
+    }
+
+    &__copyright{
+        @include mobile-text-footer;
+        margin: 0;
+        color: $silver;
+        padding-top: 3rem;
+        padding-bottom:1rem;
+
+        @include tablet {
+            @include desktab-footer;
+            padding-top: 2.25rem;
+            padding-bottom: 2.25rem;
+        }
+
+        @include desktop {
+            margin-left: auto;
+            margin-right: auto;
+            width: 85%;
+        }
+    }
+}

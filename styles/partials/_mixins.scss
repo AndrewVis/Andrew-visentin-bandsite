@@ -1,0 +1,92 @@
+@use 'variables' as *;
+// Responsive breakpoints
+@mixin mobile {
+    @media screen and (min-width:$mobile-width) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media screen and (min-width:$tablet-width) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media screen and (min-width: $desktop-width) {
+        @content;
+    }
+}
+
+//Mobile Text Styles
+@mixin mobile-text-page-header{
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: 700;
+}
+
+@mixin mobile-text-section-header{
+    font-size: 24px;
+    line-height: 32px; 
+    font-weight: 700;
+}
+
+@mixin mobile-text-subheader{
+    font-size: 14px;
+    line-height: 22px;
+    font-weight: 600;
+}
+
+@mixin mobile-text-body{
+    font-size: 13px;
+    line-height: 18px;
+    font-weight: 400;
+}
+
+@mixin mobile-text-footer{
+    font-size: 13px;
+    line-height: 18px;
+    font-weight: 400;
+}
+
+@mixin mobile-labels-buttons{
+    font-size: 10px;
+    line-height: 20px;
+    font-weight: 700;
+}
+
+@mixin desktab-page-header{
+    font-size: 60px;
+    line-height: 68px;
+    font-weight: 700;
+}
+
+@mixin desktab-section-header{
+    font-size: 36px;
+    line-height: 44px;
+    font-weight: 700;
+}
+
+@mixin desktab-subheader{
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: 600;
+}
+
+@mixin desktab-body{
+    font-size: 14px;
+    line-height: 22px;
+    font-weight: 400;
+}
+
+@mixin desktab-footer{
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 400;
+}
+
+@mixin desktab-labels-buttons{
+    font-size: 12px;
+    line-height: 20px;
+    font-weight: 700;
+}   

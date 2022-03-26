@@ -1,0 +1,185 @@
+@use 'mixins' as *;
+@use 'variables' as *;
+
+.header{
+  background-color: #323232;
+  background-size: cover;
+  width: 100%;
+  color: white;
+  height: 80px;
+  display: flex;
+  flex-direction: column;
+  
+  @include tablet{
+    align-items: center;
+    flex-direction: row;
+    padding-left: 2.25rem;
+    padding-right: 2.25rem;
+
+}
+
+@include desktop{
+    padding-left: 0;
+    padding-right: 0;
+    
+}
+ 
+
+ 
+&__flex{
+    display: flex;
+    flex-direction: column;
+
+
+    @include tablet{
+        flex-direction: row;
+        align-items: center;
+    }
+
+    @include desktop{
+        margin-left: auto;
+        margin-right: auto;
+        width: 80%;
+    }
+
+}
+
+&__title{
+    padding-top: 16px;
+    margin: auto;
+
+    @include tablet {
+        height: 20px;
+        margin: 0;
+        padding-right: 64px;
+        padding-top: 0;
+        
+    }
+}
+
+
+&-list-container{
+    display: flex;
+    padding-inline-start: 0px;
+    margin: 0;
+    align-items: center;
+    
+    @include tablet {
+        margin-bottom: 0rem;
+        
+    }
+    
+}
+
+&__list{
+    text-decoration: none;
+    line-height: 40px;
+    list-style: none;
+    
+    @include tablet {
+    line-height: 80px;
+    margin-right: 36px;
+        
+        
+    }
+    @include desktop{
+        margin-right: 48px;
+    }
+}
+
+&__bio {
+    flex:1;
+    text-align: center;
+    position: relative;
+
+    &:link{
+        color: white;
+        font-weight: 700;
+
+        &::after{
+            content: '';
+            position: absolute;
+            left: 0;
+            right:0;
+            bottom: 0;
+            width: 100%;
+            margin: 0 auto;
+            height: 3px;
+            background: white;
+        }
+    }
+
+    &:hover{
+        color: white;
+    
+        &::after{
+        content: '';
+        position: absolute;
+        left: 0;
+        right:0;
+        bottom: 0;
+        width: 100%;
+        margin: 0 auto;
+        height: 3px;
+        background: white;
+            }
+    }
+    
+    &:active {
+        color: white;
+        font-weight: 700;
+
+
+    }
+
+    &:visited{
+        color: white;
+        font-weight: 700;
+
+        &::after{
+            content: '';
+            position: absolute;
+            left: 0;
+            right:0;
+            bottom: 0;
+            width: 100%;
+            margin: 0 auto;
+            height: 3px;
+            background: white;
+        }
+    }
+
+
+    
+
+}
+
+&__shows {
+    text-align: center;
+    flex: 1;
+    position: relative;
+    color: $mercury;       
+
+    &:hover{
+        color: white;
+        
+        &::after{
+            content: '';
+            position: absolute;
+            left: 0;
+            right:0;
+            bottom: 0;
+            width: 100%;
+            margin: 0 auto;
+            height: 3px;
+            background: white;
+        }
+        
+    }
+
+    &:active{
+        color: white;
+        font-weight: 700;
+    }
+}
+}
