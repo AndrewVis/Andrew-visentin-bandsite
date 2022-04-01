@@ -76,6 +76,29 @@
           <img src="./assets/images/Photo-gallery-9.jpg" class="photo-gallery__image photo-gallery__bottom" alt="concert photo-9">
         </div>
       </section>
+      <section class="conversation">
+        <h3 class="conversation__title">Join The Conversation</h3>
+        <article class="user">
+          <div clas="users__input">
+            <input type="image" form="CommentsForm" class="user__avatar" src="/assets/images/Mohan-muruge.jpg" alt="avatar image">
+            <form class="user__form" id="commentsForm" action="commentsForm">
+              <label for="forName" class="user-field__label">Name</label>
+              <input id='fullName' form='commentsForm' class="user-field__name" name="fullName" placeholder="Enter your name"
+              min="1" type="text" maxlength="30" required>
+              <label for="comment" class="user-field__label">Comments</label>
+              <textarea name="comments__input" form="commentsForm" id="comment" class="user-field__comments"
+              cols="30" rows="5" minlength="1" maxlength="250" placeholder="Add a new comment" required></textarea>
+
+            <button type="submit" form="commentsForm" name="buton" class="user__submit">COMMENT</button>
+            </form>
+          </div>
+        </article>
+        <article class="comments">
+          
+        </article>
+
+
+      </section>
       <!--FOOTER-->
       <footer class="footer">
         <div class="footer-container">
