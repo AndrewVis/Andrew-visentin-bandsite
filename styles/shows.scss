@@ -1,0 +1,170 @@
+@use './partials/fonts' as *; 
+@use './partials/header' as*; 
+@use './partials/footer' as*;
+@use './partials/mixins' as*;
+@use './partials/variables' as*;
+@use './partials/global' as*;
+@use './partials/hero' as*;
+
+
+
+
+.shows{
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-bottom: 1rem;
+
+        @include tablet{
+            padding-left: 2.25rem;
+            padding-right: 2.25rem;
+            padding-bottom: 2.25rem;
+        }
+
+        @include desktop{
+            padding-left: 0;
+            padding-right: 0;
+            display: flex;
+            justify-content: space-between;
+            margin-left: auto;
+            margin-right: auto;
+            width: 80%;
+        }
+
+    &__title{
+        @include mobile-text-section-header;
+        margin: 0;
+        padding-top: 1.5rem;
+        font-weight: 600;
+
+        @include tablet{
+            @include desktab-section-header;
+            font-weight: 600;
+            padding-top: 3rem;
+            padding-bottom: 2.25rem;
+        }
+
+        @include desktop{
+            flex: 1 1;
+        }
+        
+    }
+
+
+    &__shows-container{
+        flex: 2 2 15rem;
+    }
+
+
+    &__subheader-container{
+        display: flex;
+        justify-content: space-between;
+        margin-right: auto;
+        width: 78.5%;
+        padding-right: 7rem;
+        
+        @include desktop{
+            padding-top: 3rem;
+           flex: 1 1 10rem;
+        }
+    }
+
+    &__subheader-title{
+        display: none;
+        
+        @include tablet{
+            @include desktab-body;
+            display: block;
+            color: $silver;
+            
+        }
+    }
+
+    &__subheader-venue{
+        padding-left: 3rem;
+    }
+
+    &-container{
+        
+        @include tablet{
+            display: flex;
+            align-items: center;
+            
+        }
+    }
+
+    &-container-ul{
+        padding: 0;
+
+
+        @include tablet{
+            display: flex;
+            flex-grow: 1;
+            align-items: flex-start;
+            justify-content: space-between;
+            
+          
+        }
+    }
+
+
+    &__button{
+        border-radius: 4px;
+        text-decoration: none;
+        border: none;
+        background-color: $bandsite-black;
+        color: white;
+        line-height: 40px;
+        width: 100%;
+
+        @include tablet{
+            width: auto;
+            max-height: 40px;
+            min-width: 150px;
+            max-width: 150px;
+            // padding-left: 32px;
+            // padding-right: 32px;
+            flex-grow: 1;
+            font-weight: 600;
+            
+        }
+    }
+
+    &__divider{
+        border-bottom: 1px solid $mercury;
+        stroke-width: 1px;
+        margin: 0;
+        margin-top: 1rem;
+    }
+
+    &__subheader{
+        @include mobile-text-subheader;
+        color: $silver;
+        font-weight: 400;
+        padding-top: 1rem;
+
+        @include tablet{
+            display: none;
+        }
+    }
+
+    &__info{
+        @include mobile-text-body;
+
+        @include tablet{
+            @include desktab-body;
+        }
+
+    &-venue__info{
+        text-align: left;
+    }
+
+    }
+
+    &-date__info{
+        font-weight: 600;
+    }
+
+    &-location__info{
+        padding-right: 4.5rem;
+    }
+}
