@@ -181,5 +181,25 @@
         color: white;
         font-weight: 700;
     }
-}
+    &-active{
+        
+        &:link{
+            color: white;
+            font-weight: 700;
+
+            &::after{
+                content: '';
+                position: absolute;
+                left: 0;
+                right:0;
+                bottom: 0;
+                width: 100%;
+                margin: 0 auto;
+                height: 3px;
+                background: white;
+            }
+        }
+    }
+
+    }
 }
