@@ -56,6 +56,32 @@
         }
     }
 
+    &-subtitle{
+        @include mobile-text-subheader;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        margin: 0;
+        color: white;
+        z-index: 3;
+        font-weight: 400;
+
+        @include tablet{
+            @include desktab-subheader;
+            padding-left: 2.25rem;
+            padding-right: 2.25rem;
+        }
+
+        @include desktop{
+        margin-left: auto;
+        margin-right: auto;
+        width: 80%;
+        padding-left: 0;
+        padding-right: 0;
+        }
+    }
+
     &-title {
         margin: 0;
         color: white;
