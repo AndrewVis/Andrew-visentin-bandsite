@@ -635,6 +635,12 @@ ul {
 .shows__shows-container {
   flex: 2 2 15rem;
 }
+.shows:hover {
+  background-color: #FAFAFA;
+}
+.shows:active {
+  background-color: #e1e1e1;
+}
 .shows__subheader-container {
   display: flex;
   justify-content: space-between;
