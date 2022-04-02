@@ -424,6 +424,7 @@ textarea{
 .comments{
  padding-bottom: 1rem;
  margin: 0;
+ ;
 
  @include tablet{
    padding-left: 3rem;
@@ -483,6 +484,7 @@ textarea{
    display: flex;
    flex-direction: row;
    justify-content: space-between;
+   list-style: none
  }
 
  &__name {
@@ -511,6 +513,7 @@ textarea{
    padding-bottom: 1rem;
    border-bottom: 1px solid $mercury;
    stroke-width: 1px;
+   list-style: none
  }
 
  &__description{
