@@ -63,30 +63,30 @@ showsTitle.innerText = "Shows";
 const showsDynamicContainer = document.createElement('div');
 showsDynamicContainer.classList.add('shows__shows-container');
 
-const DeskTabHeader = document.createElement('div')
-DeskTabHeader.classList.add('shows__subheader-container');
+const deskTabHeader = document.createElement('div')
+deskTabHeader.classList.add('shows__subheader-container');
 
-const DeskTabDate = document.createElement('h4')
-DeskTabDate.classList.add('shows__subheader-title');
-DeskTabDate.innerText = "DATES"
+const deskTabDate = document.createElement('h4')
+deskTabDate.classList.add('shows__subheader-title');
+deskTabDate.innerText = "DATES"
 
-const DeskTabVenue = document.createElement('h4')
-DeskTabVenue.classList.add('shows__subheader-title', 'shows__subheader-venue');
-DeskTabVenue.innerText = "VENUE"
+const deskTabVenue = document.createElement('h4')
+deskTabVenue.classList.add('shows__subheader-title', 'shows__subheader-venue');
+deskTabVenue.innerText = "VENUE"
 
-const DeskTabLocation = document.createElement('h4')
-DeskTabLocation.classList.add('shows__subheader-title');
-DeskTabLocation.innerText = "LOCATION"
+const deskTabLocation = document.createElement('h4')
+deskTabLocation.classList.add('shows__subheader-title');
+deskTabLocation.innerText = "LOCATION"
 
 
 
 createMain.appendChild(showsSection);
 showsSection.appendChild(showsTitle);
 showsSection.appendChild(showsDynamicContainer)
-showsDynamicContainer.appendChild(DeskTabHeader);
-DeskTabHeader.appendChild(DeskTabDate);
-DeskTabHeader.appendChild(DeskTabVenue);
-DeskTabHeader.appendChild(DeskTabLocation);
+showsDynamicContainer.appendChild(deskTabHeader);
+deskTabHeader.appendChild(deskTabDate);
+deskTabHeader.appendChild(deskTabVenue);
+deskTabHeader.appendChild(deskTabLocation);
 
 concertInfo.forEach(info => {
 
