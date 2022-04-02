@@ -300,6 +300,7 @@ background-color: #fafafa;
  @include tablet{
    padding-left: 3rem;
    padding-right: 3rem;
+   
  }
 
    @include desktop{
@@ -364,6 +365,8 @@ background-color: #fafafa;
    height: 36px;
    width: 36px;
    border-radius: 50%;
+   
+   
 
    @include tablet{
      height: 48px;
