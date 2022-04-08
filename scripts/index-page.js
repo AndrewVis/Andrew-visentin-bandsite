@@ -54,3 +54,36 @@ function displayComment() {
             })
         })
       }
+
+      const saveMe = (formDataSaved) => {
+        axios.post(`${API_URL}comments?api_key=${API_Key}`, {
+            name: formDataSaved.name,
+            comment: formDataSaved.comment
+        })
+            .then(res => displayComment(res))
+    }
+    
+    
+    function DateFormatter(anyTime) {
+        const formatter = new Intl.DateTimeFormat('en-US', {
+            day: '2-digit',
+            month: '2-digit',
+            year: 'numeric',
+        });
+        const dateFormat = new Date(anyTime);
+        return formatter.format(dateFormat)
+    }
+    
+    commentsForm.addEventListener('submit', function (event) {
+        event.preventDefault();
+        let newComment = {
+            name: event.target.fullName.value,
+            timestamp: event.target.timestamp,
+            comment: event.target.comment.value,
+        };
+    
+        saveMe(newComment)
+        commentsContainer.innerHTML = '';
+        event.target.reset();
+    });
+    displayComment()
