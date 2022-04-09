@@ -1,5 +1,5 @@
 const API_URL = 'https://project-1-api.herokuapp.com/';
-const API_Key = 'e0eea5f0-0f8c-4b54-9fc4-ff50843766d4';
+const API_Key = 'b3cdb117-cf55-47ac-b607-24293e5efd6d';
 
 function myShowsSection() {
     axios
@@ -80,3 +80,51 @@ function myShowsSection() {
         })
 }
 
+function DateFormatter(anyTime) {
+    const formatter = new Intl.DateTimeFormat('default', {
+        weekday: 'short',
+        month: 'short',
+        day: '2-digit',
+        year: 'numeric'
+    });
+    const dateFormat = new Date(anyTime);
+    return formatter.format(dateFormat).replaceAll(',', ' ')
+}
+
+
+const createMain = document.querySelector('main');
+
+const showsSection = document.createElement('section');
+showsSection.classList.add("shows");
+
+const showsTitle = document.createElement('h3');
+showsTitle.classList.add('shows__title');
+showsTitle.innerText = "Shows";
+
+const showsDynamicContainer = document.createElement('div');
+showsDynamicContainer.classList.add('shows__shows-container');
+
+const DeskTabHeader = document.createElement('div')
+DeskTabHeader.classList.add('shows__subheader-container');
+
+const DeskTabDate = document.createElement('h4')
+DeskTabDate.classList.add('shows__subheader-title');
+DeskTabDate.innerText = "DATES"
+
+const DeskTabVenue = document.createElement('h4')
+DeskTabVenue.classList.add('shows__subheader-title', 'shows__subheader-venue');
+DeskTabVenue.innerText = "VENUE"
+
+const DeskTabLocation = document.createElement('h4')
+DeskTabLocation.classList.add('shows__subheader-title');
+DeskTabLocation.innerText = "LOCATION"
+
+createMain.appendChild(showsSection);
+showsSection.appendChild(showsTitle);
+showsSection.appendChild(showsDynamicContainer)
+showsDynamicContainer.appendChild(DeskTabHeader);
+DeskTabHeader.appendChild(DeskTabDate);
+DeskTabHeader.appendChild(DeskTabVenue);
+DeskTabHeader.appendChild(DeskTabLocation);
+
+myShowsSection();
