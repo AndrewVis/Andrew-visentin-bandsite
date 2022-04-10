@@ -90,6 +90,14 @@
         @include tablet{
             display: flex;
             align-items: center;
+
+            &:hover{
+                background-color: $alabaster;
+            }
+        
+            &:active{
+                background-color: $mercury;
+            }
             
         }
     }
@@ -106,13 +114,13 @@
             justify-content: space-between;
             
 
-            &:hover{
-                background-color: $alabaster;
-            }
+            // &:hover{
+            //     background-color: $alabaster;
+            // }
         
-            &:active{
-                background-color: $mercury;
-            }
+            // &:active{
+            //     background-color: $mercury;
+            // }
           
         }
     }

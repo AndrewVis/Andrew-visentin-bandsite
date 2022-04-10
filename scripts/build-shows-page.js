@@ -22,8 +22,7 @@ function myShowsSection() {
 
                 ticketButton.addEventListener('click', function (event) {
                     event.preventDefault();
-                    console.log("Venue Location: ", info.place);
-                    console.log("Location: ", info.location);
+                    
                 })
 
                 const cardDivider = document.createElement('hr');
